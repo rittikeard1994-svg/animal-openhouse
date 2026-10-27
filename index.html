@@ -59,12 +59,63 @@ h1{font-family:Kanit;font-weight:700;font-size:34px;line-height:1.2;margin:4px 0
 .btn.alt{background:#fff;color:#1b8a5a;border:2px solid #1b8a5a}
 .btn.fb{background:#1877f2}
 .btn.ig{background:linear-gradient(90deg,#f58529,#dd2a7b 50%,#8134af)}
+/* ---------- พาสปอร์ตออนไลน์ ---------- */
+.top a.pp{text-decoration:none;font-size:14px;font-weight:700;background:#fff;color:#1b6fc2;border:2px solid #1b6fc2;padding:4px 10px;border-radius:99px;white-space:nowrap}
+.top a.tcas{white-space:nowrap}
+.top .hs{display:none}
+@media (max-width:420px){.top .hl{display:none}.top .hs{display:inline}}
+.prog{height:10px;background:rgba(255,255,255,.3);border-radius:99px;margin-top:14px;overflow:hidden;position:relative;z-index:1}
+.prog i{display:block;height:100%;width:0;background:#ffd34d;border-radius:99px;transition:width .6s ease}
+.hero .wrap{position:relative;z-index:1}
+.row{display:flex;gap:8px;margin-top:6px}
+.row input{flex:1;min-width:0;font:inherit;font-size:18px;padding:10px 14px;border:2px solid var(--line);border-radius:14px;color:var(--ink)}
+.row input:focus{outline:none;border-color:#1b6fc2}
+.row button,.stf button{font:inherit;font-weight:700;border:0;border-radius:14px;padding:10px 16px;background:#1b6fc2;color:#fff;cursor:pointer}
+.hint{font-size:14px;color:var(--ink2)}
+.stamps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.slot{background:#fff;border-radius:20px;padding:12px 6px 10px;text-align:center;box-shadow:0 2px 0 var(--line)}
+.seal{width:84px;height:84px;margin:0 auto 6px;border-radius:50%;display:grid;place-items:center;border:3px dashed #c5d3e2;background:#f6f9fc}
+.seal svg{width:52px;height:52px;filter:grayscale(1);opacity:.28}
+.slot b{display:block;font-family:Kanit;font-weight:600;font-size:15px;line-height:1.25}
+.slot span{display:block;font-size:12.5px;line-height:1.3;color:var(--ink2)}
+.slot small{display:block;margin-top:4px;font-size:12px;font-weight:600;color:#9aaabd}
+.slot.on .seal{border:4px solid var(--c);background:color-mix(in srgb,var(--c) 14%,#fff);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 6px var(--c);transform:rotate(-10deg)}
+.slot.on .seal svg{filter:none;opacity:1}
+.slot.on small{color:var(--c)}
+.slot.new .seal{animation:slam .7s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes slam{0%{transform:scale(2.6) rotate(-35deg);opacity:0}55%{transform:scale(.88) rotate(-6deg);opacity:1}100%{transform:scale(1) rotate(-10deg)}}
+.tk{display:none;position:relative;overflow:hidden;border-radius:22px;padding:18px 18px 16px;margin:12px 0;text-align:center;color:#5a3b00;background:linear-gradient(110deg,#f5c242 0%,#ffeaa0 22%,#f5c242 40%,#e9a92a 70%,#f5c242 100%);background-size:250% 100%;animation:shine 3.2s linear infinite;box-shadow:0 4px 0 #c98d16}
+.tk.show{display:block}
+@keyframes shine{from{background-position:100% 0}to{background-position:-150% 0}}
+.tk .t1{font-family:Kanit;font-weight:700;font-size:18px}
+.tk .nm{font-family:Kanit;font-weight:700;font-size:34px;line-height:1.2;margin:4px 0}
+.tk .t2{font-size:15px;font-weight:600}
+.tk .clk{font-family:Kanit;font-weight:700;font-size:30px;letter-spacing:2px;background:rgba(255,255,255,.55);border-radius:12px;display:inline-block;padding:0 14px;margin:8px 0 4px}
+.tk .t3{font-size:14px}
+.tk .used{display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-14deg);border:5px solid #c62828;color:#c62828;border-radius:14px;padding:4px 14px;font-family:Kanit;font-weight:700;font-size:26px;line-height:1.2;background:rgba(255,255,255,.85);white-space:nowrap}
+.tk.red{animation:none;background:#e6e1d6;color:#7a7364;box-shadow:0 4px 0 #c9c2b2}
+.tk.red .used{display:block}
+.tk.red .clk{opacity:.35}
+.warn{background:#fff7e6;border:1px dashed #f0b45a;border-radius:14px;padding:10px 12px;font-size:15px;margin:8px 0 0}
+.bonus{background:#f3edff;border:1px solid #d9ccfb}
+.stf{margin:14px 0 4px;font-size:14px;color:var(--ink2)}
+.stf summary{cursor:pointer;padding:6px 2px}
+.stf .box{background:#fff;border-radius:16px;padding:12px;margin-top:6px;box-shadow:0 2px 0 var(--line)}
+.stf input{font:inherit;width:100%;padding:9px 12px;border:2px solid var(--line);border-radius:12px;margin-bottom:8px}
+.stf .bt{display:flex;flex-wrap:wrap;gap:6px}
+.stf button{font-size:14px;padding:8px 12px}
+.stf button.g{background:#1b8a5a}.stf button.r{background:#c62828}
+.stf .msg{margin-top:8px;font-weight:600;color:var(--ink)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,40px);opacity:0;background:#16325c;color:#fff;font-weight:600;padding:12px 18px;border-radius:16px;box-shadow:0 6px 20px #16325c55;transition:.35s;z-index:20;max-width:calc(100% - 32px);text-align:center}
+.toast.on{transform:translate(-50%,0);opacity:1}
+.cf{position:fixed;top:-12px;width:9px;height:14px;z-index:30;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg)}}
 footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
 @media (min-width:600px){h1{font-size:40px}}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><a class="home" href="#home">🐄 ลองเป็นนักสัตวบาล</a><span class="sp"></span><a class="tcas" href="#career">ติดตามสาขา</a></div></div>
+<div class="top"><div class="wrap"><a class="home" href="#home">🐄 <span class="hl">ลองเป็นนักสัตวบาล</span><span class="hs">หน้าแรก</span></a><span class="sp"></span><a class="pp" href="#passport" id="pp-top">🎫 0/3</a><a class="tcas" href="#career">ติดตามสาขา</a></div></div>
 
 <!-- ============ HOME ============ -->
 <section class="page" id="home" style="--accent:#2e86de">
@@ -85,11 +136,12 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
    </div>
    <a class="st" href="#milk" style="--c:#2e86de"><div class="e">🥛</div><div><b>ฐาน 2 มือทองรีดนม</b><span>รีดนมด้วยมือบนเต้านมเทียม</span></div></a>
    <a class="st" href="#lasso" style="--c:#8d5a2b"><div class="e">🤠</div><div><b>ฐาน 3 บ่วงพิชิตโค</b><span>โยนบ่วงคล้องโคจำลอง</span></div></a>
-   <a class="st" href="#arcade" style="--c:#7b4ddb"><div class="e">🎮</div><div><b>ฐาน 4 สนามประลองนักสัตวบาล</b><span>เกมตู้ 3 ด่าน ท้าเพื่อนชิงอันดับ</span></div></a>
+   <a class="st" href="#arcade" style="--c:#7b4ddb"><div class="e">🎮</div><div><b>ฐาน 4 สนามประลองนักสัตวบาล</b><span>⭐ ฐานโบนัส · เกมตู้ 3 ด่าน ท้าเพื่อนชิงอันดับ</span></div></a>
   </div>
   <div class="sec pass">
    <h2>🎫 พาสปอร์ตนักสัตวบาล</h2>
-   <p>รับบัตรที่โต๊ะต้อนรับ ผ่านฐานไหนให้พี่ประจำฐานประทับตรา <b>ครบ 3 ตราขึ้นไป</b> รับของที่ระลึกที่โต๊ะต้อนรับได้เลย</p>
+   <p>พาสปอร์ตอยู่ในมือถือ ไม่ต้องรับบัตรกระดาษ เล่นจบแต่ละฐาน พี่ประจำฐานจะยื่น QR ให้สแกนรับตรา <b>ครบ 3 ฐาน (ฐาน 1–3)</b> รับของที่ระลึกที่โต๊ะต้อนรับ ส่วนฐาน 4 เกมตู้เป็นโบนัส</p>
+   <a class="btn" href="#passport" style="background:#1b6fc2">🎫 เปิดพาสปอร์ตของฉัน</a>
   </div>
   <a class="btn" href="#career">🎓 นักสัตวบาลทำงานอะไร + ติดตามสาขา</a>
  </div>
@@ -374,12 +426,41 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
     <li><b>ด่าน 2 รีดนมตามจังหวะ</b> (35 วิ) กด LT/RT ตามโน้ต ถ้ากดรัวมั่ว แม่โคจะเตะถัง!</li>
     <li><b>ด่าน 3 คล้องโค</b> (50 วิ) ค้างปุ่ม A เพื่อหมุนบ่วง แล้วปล่อยตอนเข็มอยู่โซนเขียว</li>
    </ul>
-   <p>ติด 10 อันดับของวันนี้ ได้ใส่ชื่อย่อขึ้นกระดาน!</p>
+   <p>ติด 10 อันดับของวันนี้ ได้ใส่ชื่อย่อขึ้นกระดาน และรับสติกเกอร์พิเศษ!</p>
+   <p>⭐ <b>ฐานนี้เป็นโบนัส</b> ไม่ต้องเก็บตรา เล่นได้เมื่อคิวว่าง ถ้าคิวยาว ไปเก็บตราฐาน 1–3 ก่อนได้เลย</p>
   </div>
   <div class="sec fact"><h2>💡 เคล็ดลับ</h2>
    <p>ถ้าอ่านความรู้ของฐาน 1 ในเว็บนี้มาแล้ว ด่านแรกจะง่ายขึ้นมาก 😉</p>
   </div>
   <div class="nav"><a href="#lasso">← ก่อนหน้า<b>ฐาน 3 คล้องโค</b></a><a href="#career">ถัดไป →<b>นักสัตวบาล + ติดตามสาขา</b></a></div>
+ </div>
+</section>
+
+<!-- ============ PASSPORT (online) ============ -->
+<section class="page" id="passport" style="--accent:#1b6fc2">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🎫</div><span class="kick">Open House · ลองเป็นนักสัตวบาล</span>
+  <h1>พาสปอร์ตนักสัตวบาล</h1>
+  <p id="pp-hello">เล่นครบ 3 ฐาน รับของที่ระลึกที่โต๊ะต้อนรับ</p>
+  <div class="prog"><i id="pp-bar"></i></div><div class="read" id="pp-count">ตรา 0/3</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec" id="pp-name"><h2>✍️ ชื่อเล่นของน้อง</h2>
+   <div class="row"><input id="pp-in" maxlength="16" placeholder="เช่น ต้นข้าว" autocomplete="off" enterkeyhint="done"><button type="button" id="pp-save">บันทึก</button></div>
+   <p class="hint">ใช้แสดงบนบัตรแลกของที่ระลึก ใส่แค่ชื่อเล่นพอ</p>
+  </div>
+  <div class="tk" id="pp-tk"><div class="t1">🎁 บัตรแลกของที่ระลึก</div><div class="nm" id="tk-nm"></div><div class="t2" id="tk-t2"></div><div class="clk" id="tk-clk">--:--:--</div><div class="t3">ยื่นจอนี้ให้พี่ที่โต๊ะต้อนรับ</div><div class="used" id="tk-used"></div></div>
+  <div class="stamps" id="pp-st"></div>
+  <div class="sec"><h2>📲 รับตรายังไง</h2>
+   <ol style="margin:6px 0;padding-left:22px"><li>เล่นแต่ละฐานให้จบ</li><li>พี่ประจำฐานยื่น <b>การ์ด QR</b> ให้สแกน แล้วตราจะเด้งขึ้นที่หน้านี้</li><li>ครบ 3 ตรา บัตรทองจะโผล่ขึ้นมา ให้ไปโชว์พี่ที่โต๊ะต้อนรับ</li></ol>
+   <p class="warn" id="pp-br"></p>
+  </div>
+  <div class="sec bonus"><h2>🎮 โบนัส: ฐาน 4 สนามประลอง</h2><p>ไม่ต้องเก็บตรา เล่นได้ถ้าคิวว่าง ติด 10 อันดับของวันนี้รับ<b>สติกเกอร์พิเศษ</b></p></div>
+  <a class="btn" href="#career">🎓 นักสัตวบาลทำงานอะไร + ติดตามสาขา</a>
+  <details class="stf"><summary>🔒 สำหรับพี่ประจำบูธ</summary><div class="box">
+   <input id="pin" type="password" inputmode="numeric" placeholder="รหัสพี่" autocomplete="off">
+   <div class="bt"><button type="button" class="g" data-a="red">✓ แลกของแล้ว</button><button type="button" data-a="g1">เติมตรา 1</button><button type="button" data-a="g2">เติมตรา 2</button><button type="button" data-a="g3">เติมตรา 3</button><button type="button" class="r" data-a="clr">ล้างพาสปอร์ตนี้</button></div>
+   <div class="msg" id="stf-msg"></div></div></details>
  </div>
 </section>
 
@@ -414,17 +495,83 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
  </div>
 </section>
 
+<div class="toast" id="toast"></div>
 <footer>สาขาวิชาเทคโนโลยีการเกษตร คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์<br>บูธ Open House · “ลองเป็นนักสัตวบาล”</footer>
 
 <script>
+/* ---------- พาสปอร์ตออนไลน์: ตราเก็บใน localStorage ของเบราว์เซอร์นี้ รีเซ็ตเองเมื่อข้ามวัน ---------- */
+var ST=[{"no": "1", "name": "นักสืบวัตถุดิบ", "c": "#e8833a", "svg": "<svg viewBox=\"0 0 120 120\"><ellipse cx=\"58\" cy=\"106\" rx=\"46\" ry=\"6\" fill=\"#16325c\" opacity=\".12\"/><path d=\"M14 102 Q20 78 40 74 Q52 62 70 68 Q90 64 100 82 Q106 92 106 102 Z\" fill=\"#e3b06b\" stroke=\"#16325c\" stroke-width=\"4\" stroke-linejoin=\"round\"/><g fill=\"#b9772f\"><circle cx=\"30\" cy=\"92\" r=\"4\"/><circle cx=\"44\" cy=\"86\" r=\"3.5\"/><circle cx=\"58\" cy=\"95\" r=\"4\"/><circle cx=\"76\" cy=\"86\" r=\"3.5\"/><circle cx=\"90\" cy=\"94\" r=\"4\"/><circle cx=\"38\" cy=\"98\" r=\"3\"/></g><circle cx=\"60\" cy=\"48\" r=\"27\" fill=\"#eaf6ff\" stroke=\"#16325c\" stroke-width=\"7\"/><circle cx=\"51\" cy=\"55\" r=\"6\" fill=\"#e3b06b\"/><circle cx=\"68\" cy=\"56\" r=\"5.5\" fill=\"#ef5d7a\"/><circle cx=\"62\" cy=\"42\" r=\"4\" fill=\"#e3b06b\"/><path d=\"M44 36 A20 20 0 0 1 58 28\" fill=\"none\" stroke=\"#fff\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M80 68 L100 90\" stroke=\"#16325c\" stroke-width=\"13\" stroke-linecap=\"round\"/><path d=\"M80 68 L100 90\" stroke=\"#e8833a\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M22 6 C22 6 12 20 12 27 a10 10 0 0 0 20 0 C32 20 22 6 22 6Z\" fill=\"#ef5d7a\" stroke=\"#16325c\" stroke-width=\"3.5\"/></svg>"}, {"no": "2", "name": "มือทองรีดนม", "c": "#2e86de", "svg": "<svg viewBox=\"0 0 120 120\"><ellipse cx=\"60\" cy=\"109\" rx=\"34\" ry=\"5\" fill=\"#16325c\" opacity=\".12\"/><path d=\"M30 54 Q60 12 90 54\" fill=\"none\" stroke=\"#16325c\" stroke-width=\"4\"/><path d=\"M30 56 L37 100 Q60 110 83 100 L90 56 Z\" fill=\"#cfdeee\" stroke=\"#16325c\" stroke-width=\"4.5\" stroke-linejoin=\"round\"/><path d=\"M42 74 q6 -8 13 -2 q5 7 -2 12 q-10 3 -11 -10z\" fill=\"#16325c\"/><path d=\"M68 88 q6 -5 10 0 q1 7 -6 7 q-6 -1 -4 -7z\" fill=\"#16325c\"/><ellipse cx=\"60\" cy=\"56\" rx=\"30\" ry=\"8\" fill=\"#fff\" stroke=\"#16325c\" stroke-width=\"4.5\"/><ellipse cx=\"60\" cy=\"57\" rx=\"23\" ry=\"4.5\" fill=\"#eef4fa\"/><path d=\"M60 2 C60 2 49 17 49 24 a11 11 0 0 0 22 0 C71 17 60 2 60 2Z\" fill=\"#fff\" stroke=\"#16325c\" stroke-width=\"4\"/><circle cx=\"40\" cy=\"38\" r=\"3.5\" fill=\"#fff\" stroke=\"#16325c\" stroke-width=\"2.5\"/><circle cx=\"82\" cy=\"34\" r=\"4\" fill=\"#fff\" stroke=\"#16325c\" stroke-width=\"2.5\"/><circle cx=\"89\" cy=\"44\" r=\"2.5\" fill=\"#fff\" stroke=\"#16325c\" stroke-width=\"2\"/><path d=\"M54 18 A8 8 0 0 0 53 27\" fill=\"none\" stroke=\"#2e86de\" stroke-width=\"2.5\" stroke-linecap=\"round\" opacity=\".6\"/></svg>"}, {"no": "3", "name": "บ่วงพิชิตโค", "c": "#8d5a2b", "svg": "<svg viewBox=\"0 0 120 120\"><ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"5\" fill=\"#16325c\" opacity=\".12\"/><path d=\"M42 40 Q22 36 17 14 Q32 28 47 32 Z\" fill=\"#f6e7c8\" stroke=\"#16325c\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/><path d=\"M78 40 Q98 36 103 14 Q88 28 73 32 Z\" fill=\"#f6e7c8\" stroke=\"#16325c\" stroke-width=\"3.5\" stroke-linejoin=\"round\"/><ellipse cx=\"29\" cy=\"52\" rx=\"13\" ry=\"6.5\" transform=\"rotate(-18 29 52)\" fill=\"#a8703c\" stroke=\"#16325c\" stroke-width=\"3.5\"/><ellipse cx=\"91\" cy=\"52\" rx=\"13\" ry=\"6.5\" transform=\"rotate(18 91 52)\" fill=\"#a8703c\" stroke=\"#16325c\" stroke-width=\"3.5\"/><path d=\"M40 32 Q60 24 80 32 Q88 58 80 88 Q60 100 40 88 Q32 58 40 32Z\" fill=\"#a8703c\" stroke=\"#16325c\" stroke-width=\"4\"/><path d=\"M54 32 Q60 29 66 32 L63 64 Q60 68 57 64Z\" fill=\"#fff\" opacity=\".92\"/><circle cx=\"48\" cy=\"53\" r=\"4.5\" fill=\"#16325c\"/><circle cx=\"72\" cy=\"53\" r=\"4.5\" fill=\"#16325c\"/><circle cx=\"49.5\" cy=\"51.5\" r=\"1.5\" fill=\"#fff\"/><circle cx=\"73.5\" cy=\"51.5\" r=\"1.5\" fill=\"#fff\"/><ellipse cx=\"60\" cy=\"85\" rx=\"19\" ry=\"12\" fill=\"#f2b8a8\" stroke=\"#16325c\" stroke-width=\"4\"/><ellipse cx=\"53\" cy=\"85\" rx=\"3\" ry=\"4\" fill=\"#16325c\"/><ellipse cx=\"67\" cy=\"85\" rx=\"3\" ry=\"4\" fill=\"#16325c\"/><ellipse cx=\"60\" cy=\"28\" rx=\"45\" ry=\"11\" fill=\"none\" stroke=\"#16325c\" stroke-width=\"8\"/><ellipse cx=\"60\" cy=\"28\" rx=\"45\" ry=\"11\" fill=\"none\" stroke=\"#e2b33c\" stroke-width=\"4.5\" stroke-dasharray=\"6 3\"/><path d=\"M104 32 Q116 52 108 72 Q100 92 114 106\" fill=\"none\" stroke=\"#16325c\" stroke-width=\"8\" stroke-linecap=\"round\"/><path d=\"M104 32 Q116 52 108 72 Q100 92 114 106\" fill=\"none\" stroke=\"#e2b33c\" stroke-width=\"4.5\" stroke-dasharray=\"6 3\" stroke-linecap=\"round\"/></svg>"}];
+var SH={"1": "1jc0c7x", "2": "gbztbd", "3": "u6udwa"}, PH='1f9legf', KEY='asa-passport-v1', mem=null, pend=null;
+function hh(t){var x=2166136261;for(var i=0;i<t.length;i++){x^=t.charCodeAt(i);x=Math.imul(x,16777619)>>>0}return x.toString(36)}
+function today(){var d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+var canStore=(function(){try{localStorage.setItem('_t','1');localStorage.removeItem('_t');return true}catch(e){return false}})();
+function load(){var s=null;try{s=JSON.parse(localStorage.getItem(KEY))}catch(e){}if(!s)s=mem;if(!s||s.d!==today())s={d:today(),n:'',st:{},done:0,red:0};return s}
+function save(s){mem=s;try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+function cnt(s){return ST.filter(function(x){return s.st[x.no]}).length}
+function hm(t,sec){var d=new Date(t),p=function(n){return(n<10?'0':'')+n};return p(d.getHours())+':'+p(d.getMinutes())+(sec?':'+p(d.getSeconds()):'')}
+function chkDone(s){if(!s.done&&cnt(s)===ST.length){s.done=Date.now();return true}return false}
+function addStamp(no,tok){
+  if(!SH[no]||hh(no+'-'+tok)!==SH[no])return{bad:1};
+  var s=load();if(s.st[no])return{dup:no};
+  s.st[no]=Date.now();var c=chkDone(s);save(s);return{add:no,full:c};
+}
+function brName(){var u=navigator.userAgent;
+  if(/ Line\//i.test(u))return'LINE';if(/FBAN|FBAV|FB_IAB/.test(u))return'Facebook';if(/Instagram/i.test(u))return'Instagram';
+  if(/SamsungBrowser/.test(u))return'Samsung Internet';if(/EdgA|EdgiOS|Edg\//.test(u))return'Edge';if(/CriOS|Chrome/.test(u))return'Chrome';if(/Safari/.test(u))return'Safari';return''}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function toast(t){var e=document.getElementById('toast');e.innerHTML=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('on')},3200)}
+function confetti(){var cs=['#ffd34d','#e8833a','#2e86de','#8d5a2b','#1b8a5a','#ef5d7a'];
+  for(var i=0;i<46;i++){var e=document.createElement('i');e.className='cf';e.style.left=Math.random()*100+'vw';e.style.background=cs[i%cs.length];
+    e.style.animationDuration=(1.6+Math.random()*1.6)+'s';e.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(e);(function(x){setTimeout(function(){x.remove()},4000)})(e)}}
+function topCount(){var t=document.getElementById('pp-top');if(t)t.textContent='🎫 '+cnt(load())+'/'+ST.length}
+function renderPass(newNo){
+  var s=load(),n=cnt(s);
+  document.getElementById('pp-bar').style.width=(n/ST.length*100)+'%';
+  document.getElementById('pp-count').textContent=n===ST.length?'ครบ 3 ตราแล้ว! 🎉':'ตรา '+n+'/'+ST.length+' · เหลืออีก '+(ST.length-n)+' ฐาน';
+  var goal=s.red?'รับของที่ระลึกแล้ว ขอบคุณที่มาเป็นนักสัตวบาลกับเรานะ':s.done?'เก่งมาก! ไปรับของที่ระลึกที่โต๊ะต้อนรับได้เลย':'เล่นครบ 3 ฐาน รับของที่ระลึกที่โต๊ะต้อนรับ';
+  document.getElementById('pp-hello').innerHTML=(s.n?'สวัสดี น้อง<b>'+esc(s.n)+'</b> 👋 ':'')+goal;
+  document.getElementById('pp-name').style.display=s.n?'none':'block';
+  document.getElementById('pp-st').innerHTML=ST.map(function(x){var t=s.st[x.no];
+    return '<div class="slot'+(t?' on':'')+(newNo===x.no?' new':'')+'" style="--c:'+x.c+'"><div class="seal">'+x.svg+'</div><b>ฐาน '+x.no+'</b><span>'+x.name+'</span><small>'+(t?'✓ ผ่าน '+hm(t):'ยังไม่ได้ตรา')+'</small></div>'}).join('');
+  var tk=document.getElementById('pp-tk');tk.classList.toggle('show',!!s.done);tk.classList.toggle('red',!!s.red);
+  if(s.done){document.getElementById('tk-nm').textContent=s.n?'น้อง'+s.n:'นักสัตวบาลฝึกหัด';
+    document.getElementById('tk-t2').textContent='ผ่านครบ 3 ฐาน เมื่อ '+hm(s.done)+' น.';
+    document.getElementById('tk-used').innerHTML='รับของแล้ว<br>'+(s.red?hm(s.red)+' น.':'')}
+  var b=brName(),w=document.getElementById('pp-br');
+  w.innerHTML=!canStore?'⚠ เบราว์เซอร์นี้ไม่ยอมเก็บตรา (อาจเปิดโหมดส่วนตัวไว้) ปิดโหมดส่วนตัว หรือแจ้งพี่ที่โต๊ะต้อนรับนะ'
+   :'⚠ ตราเก็บไว้ใน <b>'+(b||'เบราว์เซอร์นี้')+'</b> ของมือถือเครื่องนี้ ฐานต่อไปให้สแกนด้วย'+(/LINE|Facebook|Instagram/.test(b)?'<b> '+b+' </b>':'<b>กล้องมือถือ</b>')+'เหมือนเดิม ถ้าสแกนด้วยแอปอื่น ตราจะไม่มารวมกันที่นี่';
+  topCount();
+}
+setInterval(function(){var tk=document.getElementById('pp-tk');if(tk&&tk.classList.contains('show'))document.getElementById('tk-clk').textContent=hm(Date.now(),1)},1000);
+document.getElementById('pp-save').onclick=function(){var v=document.getElementById('pp-in').value.trim().slice(0,16);if(!v){toast('พิมพ์ชื่อเล่นก่อนนะ');return}var s=load();s.n=v;save(s);renderPass();toast('บันทึกชื่อแล้ว ไปเก็บตรากันเลย!')};
+document.getElementById('pp-in').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('pp-save').click()});
+[].forEach.call(document.querySelectorAll('.stf button'),function(bt){bt.onclick=function(){
+  var m=document.getElementById('stf-msg'),pin=document.getElementById('pin');
+  if(hh('pin-'+pin.value.trim())!==PH){m.textContent='รหัสพี่ไม่ถูกต้อง';return}
+  var a=bt.getAttribute('data-a'),s=load();
+  if(a==='red'){if(!s.done)m.textContent='ยังไม่ครบ 3 ตรา แลกของไม่ได้';else if(s.red)m.textContent='พาสปอร์ตนี้แลกของไปแล้วเมื่อ '+hm(s.red)+' น.';else{s.red=Date.now();save(s);m.textContent='✓ บันทึกแลกของแล้ว';pin.value=''}}
+  else if(a==='clr'){if(bt._ok){s={d:today(),n:'',st:{},done:0,red:0};save(s);bt._ok=0;bt.textContent='ล้างพาสปอร์ตนี้';m.textContent='ล้างแล้ว';pin.value=''}else{bt._ok=1;bt.textContent='แตะอีกครั้งเพื่อยืนยัน';m.textContent='จะลบตราและชื่อทั้งหมดในเครื่องนี้';return}}
+  else{var no=a.slice(1);if(s.st[no])m.textContent='ฐาน '+no+' มีตราอยู่แล้ว';else{s.st[no]=Date.now();var f=chkDone(s);save(s);m.textContent='✓ เติมตราฐาน '+no+' แล้ว';renderPass(no);if(f)confetti();return}}
+  renderPass();
+}});
 var ids=[].map.call(document.querySelectorAll('.page'),function(s){return s.id});
 function show(){
-  var h=(location.hash||'#home').slice(1); if(ids.indexOf(h)<0) h='home';
+  var h=(location.hash||'#home').slice(1), r=null, m=/^st-(\d)-(\w+)$/.exec(h);
+  if(m){ r=addStamp(m[1],m[2]); h='passport'; try{history.replaceState(null,'',location.pathname+location.search+'#passport')}catch(e){} }
+  if(ids.indexOf(h)<0) h='home';
   document.querySelectorAll('.page').forEach(function(s){s.classList.toggle('on',s.id===h)});
   var c=getComputedStyle(document.getElementById(h)).getPropertyValue('--accent');
   var m=document.querySelector('meta[name=theme-color]'); if(m) m.content=c.trim();
   var top=function(){window.scrollTo({top:0,left:0,behavior:'instant'})};
   top(); requestAnimationFrame(top); setTimeout(top,60);
+  if(h==='passport'){
+    renderPass(r&&r.add);
+    if(r&&r.bad) toast('QR นี้ไม่ใช่ตราของบูธ ลองสแกนใหม่อีกครั้งนะ');
+    else if(r&&r.dup) toast('ฐาน '+r.dup+' ได้ตราไปแล้ว ไปฐานต่อไปเลย!');
+    else if(r&&r.add){ try{navigator.vibrate&&navigator.vibrate([60,40,140])}catch(e){}
+      if(r.full){ toast('🎉 ครบ 3 ฐานแล้ว! โชว์บัตรทองที่โต๊ะต้อนรับ'); confetti(); }
+      else toast('ได้ตราฐาน '+r.add+' แล้ว! เหลืออีก '+(ST.length-cnt(load()))+' ฐาน'); }
+  } else topCount();
 }
 window.addEventListener('hashchange',show); show();
 </script>
