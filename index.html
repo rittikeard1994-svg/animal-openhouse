@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ลองเป็นนักสัตวบาล · Open House</title>
+<meta name="description" content="ความรู้ประจำฐานกิจกรรม บูธสาขาวิชาเทคโนโลยีการเกษตร คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16325c;--ink2:#41618c;--bg:#eef7ff;--card:#fff;--line:#d7e7f6;--accent:#2e86de;--soft:#e8f3fd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Thai',system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+.page{display:none;padding-bottom:28px;scroll-margin-top:60px}
+.page.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.top{position:sticky;top:0;z-index:5;background:rgba(238,247,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:10px;height:52px}
+.top a.home{text-decoration:none;font-family:Kanit;font-weight:600;font-size:16px;display:flex;align-items:center;gap:8px}
+.top .sp{flex:1}
+.top a.tcas{text-decoration:none;font-size:14px;font-weight:600;background:#1b8a5a;color:#fff;padding:6px 12px;border-radius:99px}
+.hero{background:var(--accent);color:#fff;border-radius:0 0 28px 28px;padding:26px 0 30px;margin-bottom:18px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.12);right:-70px;top:-90px}
+.hero .ico{font-size:52px;line-height:1}
+.kick{display:inline-block;background:rgba(255,255,255,.22);padding:3px 12px;border-radius:99px;font-size:14px;font-weight:600;margin:10px 0 4px}
+h1{font-family:Kanit;font-weight:700;font-size:34px;line-height:1.2;margin:4px 0 6px}
+.hero p{margin:0;font-size:17px;opacity:.95}
+.read{font-size:13px;opacity:.85;margin-top:10px}
+.sec{background:var(--card);border-radius:20px;padding:16px 18px;margin:12px 0;box-shadow:0 2px 0 var(--line)}
+.sec h2{font-family:Kanit;font-weight:600;font-size:20px;margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.sec p{margin:6px 0}
+.sec ul{margin:6px 0;padding-left:22px}
+.eq{background:var(--soft);border-radius:14px;padding:10px 14px;font-weight:600;font-size:16px;margin:8px 0;overflow-x:auto;white-space:nowrap}
+.eq small{display:block;font-weight:400;white-space:normal;color:var(--ink2)}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.sw div{border-radius:14px;padding:12px;text-align:center;font-size:15px;border:1px solid var(--line)}
+.sw b{display:block;font-size:16px}
+.dot{display:block;width:46px;height:46px;border-radius:50%;margin:0 auto 6px;border:3px solid #fff;box-shadow:0 0 0 1px #0002}
+.fact{background:#fff7e6;border:1px dashed #f0b45a}
+.job{background:#eafaf1}
+.quiz button{width:100%;font:inherit;font-weight:600;border:0;border-radius:14px;padding:12px;background:var(--accent);color:#fff;cursor:pointer;margin-top:8px}
+.quiz .ans{display:none;margin-top:10px;background:var(--soft);border-radius:14px;padding:10px 14px}
+.quiz.open .ans{display:block}
+.nav{display:flex;gap:10px;margin-top:16px}
+.nav a{flex:1;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-size:14px;text-align:center}
+.nav a b{display:block;font-family:Kanit;font-weight:600;font-size:16px}
+.grid{display:grid;gap:12px}
+.st{display:flex;gap:14px;align-items:center;text-decoration:none;background:#fff;border-radius:20px;padding:14px 16px;box-shadow:0 2px 0 var(--line);border-left:8px solid var(--c)}
+.st .e{font-size:38px}
+.st b{font-family:Kanit;font-weight:600;font-size:19px;display:block;line-height:1.3}
+.st span{font-size:14px;color:var(--ink2)}
+.sub4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.sub4 a{text-decoration:none;background:#fff;border-radius:16px;padding:12px;border-top:6px solid var(--c);box-shadow:0 2px 0 var(--line);font-size:14px}
+.sub4 a b{display:block;font-family:Kanit;font-weight:600;font-size:17px}
+.pass{background:linear-gradient(135deg,#fff,#eaf6ff);border:2px solid #2e86de33}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:700;border-radius:16px;padding:14px;margin-top:10px;background:#1b8a5a;color:#fff;font-size:17px}
+.btn.alt{background:#fff;color:#1b8a5a;border:2px solid #1b8a5a}
+footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
+@media (min-width:600px){h1{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><a class="home" href="#home">🐄 ลองเป็นนักสัตวบาล</a><span class="sp"></span><a class="tcas" href="#career">สนใจเรียน</a></div></div>
+
+<!-- ============ HOME ============ -->
+<section class="page" id="home" style="--accent:#2e86de">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🐄🧪🥛</div>
+  <span class="kick">Open House · สาขาวิชาเทคโนโลยีการเกษตร</span>
+  <h1>ลองเป็นนักสัตวบาล 15 นาที</h1>
+  <p>4 ฐาน 4 ทักษะที่นักสัตวบาลใช้จริงในงาน ตั้งแต่ตรวจอาหารสัตว์ รีดนม ไปจนถึงจับบังคับโค</p>
+ </div></div>
+ <div class="wrap">
+  <div class="grid">
+   <a class="st" href="#detective" style="--c:#e8833a"><div class="e">🔍</div><div><b>ฐาน 1 นักสืบวัตถุดิบ</b><span>หยดน้ำยาจับผิดอาหารสัตว์ปลอมปน</span></div></a>
+   <div class="sub4">
+    <a href="#raw" style="--c:#ef5d7a"><b>1A ดิบหรือสุก?</b>ความสุกของถั่วเหลือง</a>
+    <a href="#starch" style="--c:#3949ab"><b>1B แป้งแอบแฝง</b>แป้งปนในปลาป่น</a>
+    <a href="#stone" style="--c:#13a3a0"><b>1C ฟองฟ้องหิน</b>หินฝุ่นปนในวัตถุดิบ</a>
+    <a href="#hull" style="--c:#c0392b"><b>1D แกลบปลอมตัว</b>แกลบปนในรำ</a>
+   </div>
+   <a class="st" href="#milk" style="--c:#2e86de"><div class="e">🥛</div><div><b>ฐาน 2 มือทองรีดนม</b><span>รีดนมด้วยมือบนเต้านมเทียม</span></div></a>
+   <a class="st" href="#lasso" style="--c:#8d5a2b"><div class="e">🤠</div><div><b>ฐาน 3 บ่วงพิชิตโค</b><span>โยนบ่วงคล้องโคจำลอง</span></div></a>
+   <a class="st" href="#arcade" style="--c:#7b4ddb"><div class="e">🎮</div><div><b>ฐาน 4 สนามประลองนักสัตวบาล</b><span>เกมตู้ 3 ด่าน ท้าเพื่อนชิงอันดับ</span></div></a>
+  </div>
+  <div class="sec pass">
+   <h2>🎫 พาสปอร์ตนักสัตวบาล</h2>
+   <p>รับบัตรที่โต๊ะต้อนรับ ผ่านฐานไหนให้พี่ประจำฐานประทับตรา <b>ครบ 3 ตราขึ้นไป</b> รับของที่ระลึกที่โต๊ะต้อนรับได้เลย</p>
+  </div>
+  <a class="btn" href="#career">🎓 นักสัตวบาลทำงานอะไร + สมัครเรียน</a>
+ </div>
+</section>
+
+<!-- ============ DETECTIVE overview ============ -->
+<section class="page" id="detective" style="--accent:#e8833a">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🔍</div><span class="kick">ฐาน 1</span>
+  <h1>นักสืบวัตถุดิบ</h1>
+  <p>จับผิดอาหารสัตว์ปลอมปนด้วยน้ำยาไม่กี่หยด</p>
+  <div class="read">⏱ อ่าน 1 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>📜 ทำไมต้องมีนักสืบ</h2>
+   <p>ค่าอาหารคิดเป็น<b>ประมาณ 60–70% ของต้นทุนการเลี้ยงสัตว์</b> วัตถุดิบจึงซื้อขายกันทีละหลายตัน และคิดราคาตามน้ำหนักกับคุณภาพ คนขายบางรายจึงแอบเติมของถูกลงไปเพื่อให้ได้น้ำหนักเพิ่ม</p>
+   <p>สัตว์ที่กินอาหารปลอมปนจะโตช้า ให้ผลผลิตน้อย บางครั้งป่วย ส่วนเกษตรกรก็จ่ายเงินไปฟรี ๆ ประเทศไทยจึงมี<b>พระราชบัญญัติควบคุมคุณภาพอาหารสัตว์ พ.ศ. 2558</b> คอยกำกับเรื่องนี้</p>
+  </div>
+  <div class="sec"><h2>🧪 การทดสอบด่วน (Quick test)</h2>
+   <p>ผลวิเคราะห์จากห้องแลปต้องรอหลายวัน แต่รถขนวัตถุดิบมาจอดรอหน้าโรงงานแล้ว ฝ่ายควบคุมคุณภาพจึงใช้<b>น้ำยาทดสอบอย่างง่าย</b> ที่รู้ผลได้ในไม่กี่นาที ใช้ตัดสินว่าจะรับวัตถุดิบล็อตนี้หรือส่งกลับ</p>
+  </div>
+  <div class="sub4">
+   <a href="#raw" style="--c:#ef5d7a"><b>1A ดิบหรือสุก?</b>ยูเรีย + ฟีนอลเรด</a>
+   <a href="#starch" style="--c:#3949ab"><b>1B แป้งแอบแฝง</b>ไอโอดีน</a>
+   <a href="#stone" style="--c:#13a3a0"><b>1C ฟองฟ้องหิน</b>กรดเกลือ</a>
+   <a href="#hull" style="--c:#c0392b"><b>1D แกลบปลอมตัว</b>ฟลอโรกลูซินอล</a>
+  </div>
+ </div>
+</section>
+
+<!-- ============ 1A RAW ============ -->
+<section class="page" id="raw" style="--accent:#ef5d7a">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🔥</div><span class="kick">ฐาน 1 · จุด 1A</span>
+  <h1>ดิบหรือสุก?</h1>
+  <p>ทดสอบความสุกของถั่วเหลืองด้วยน้ำยายูเรีย–ฟีนอลเรด</p>
+  <div class="read">⏱ อ่าน 2 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🔍 มันคืออะไร</h2>
+   <p>เป็นการตรวจว่าถั่วเหลืองหรือกากถั่วเหลืองที่จะใส่ในอาหารสัตว์ ผ่านความร้อน<b>มากพอ</b>แล้วหรือยัง</p>
+  </div>
+  <div class="sec"><h2>📜 ที่ไปที่มา</h2>
+   <p>กากถั่วเหลืองเป็นแหล่งโปรตีนหลักในอาหารหมู ไก่ และโค แต่ถั่วเหลืองดิบมี<b>สารยับยั้งทริปซิน (trypsin inhibitor)</b> ซึ่งขัดขวางเอนไซม์ที่ใช้ย่อยโปรตีนในลำไส้ สัตว์ที่กินเข้าไปจะย่อยโปรตีนได้น้อย โตช้า และตับอ่อนต้องทำงานหนักขึ้น</p>
+   <p>สารตัวนี้ถูกทำลายได้ด้วยความร้อน โรงงานจึงต้องนึ่งหรืออบถั่วก่อนใช้ แต่การวัดสารยับยั้งโดยตรงทำได้ยาก จึงวัด<b>เอนไซม์ยูรีเอส (urease)</b> แทน เพราะยูรีเอสอยู่ในถั่วเหลืองเหมือนกันและถูกความร้อนทำลายไปพร้อม ๆ กัน ถ้ายังพบยูรีเอสก็แปลว่าสารยับยั้งยังอยู่ด้วย</p>
+  </div>
+  <div class="sec"><h2>🧪 หลักการ</h2>
+   <p>ยูรีเอสย่อยยูเรียในน้ำยาได้แอมโมเนีย ซึ่งเป็น<b>ด่าง</b></p>
+   <div class="eq">CO(NH₂)₂ + H₂O → 2NH₃ + CO₂<small>ยูเรีย + น้ำ → แอมโมเนีย + คาร์บอนไดออกไซด์ (มียูรีเอสเป็นตัวเร่ง)</small></div>
+   <p>สารชี้บอก<b>ฟีนอลเรด</b>เป็นสีเหลืองเมื่อเป็นกลาง และเปลี่ยนเป็นสีชมพู–แดงเมื่อเป็นด่าง (ช่วง pH ประมาณ 6.8–8.2)</p>
+  </div>
+  <div class="sec"><h2>👁 อ่านผลยังไง (รอ 5 นาที)</h2>
+   <div class="sw">
+    <div><span class="dot" style="background:#e9c46a"></span><b>สุกดี ✅</b>สีเหลืองอำพันเหมือนเดิม</div>
+    <div><span class="dot" style="background:#e63e6d"></span><b>ยังดิบ ❌</b>มีจุดสีชมพู–แดงจำนวนมาก</div>
+   </div>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <p>ร้อน<b>เกินไป</b>ก็ไม่ดี! ถ้าอบนานเกิน กรดอะมิโน<b>ไลซีน</b>จะไปจับกับน้ำตาล (ปฏิกิริยาเมลลาร์ด แบบเดียวกับที่ทำให้ขนมปังปิ้งเป็นสีน้ำตาล) จนสัตว์นำไปใช้ไม่ได้ เป้าหมายจึงคือต้อง<b>สุกพอดี</b> ในห้องแลป นักวิทยาศาสตร์จะวัดเป็นตัวเลขว่าค่า pH เพิ่มขึ้นเท่าไร</p>
+  </div>
+  <div class="sec job"><h2>🧑‍🔬 นักสัตวบาลใช้ทำอะไร</h2>
+   <p>ฝ่ายควบคุมคุณภาพของโรงงานอาหารสัตว์ใช้วิธีนี้ตรวจกากถั่วเหลืองที่รับเข้าโรงงานทุกล็อต</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>ทำไมไม่วัดสารยับยั้งทริปซินตรง ๆ แต่ไปวัดเอนไซม์ยูรีเอสแทน?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">เพราะวัดยูรีเอสได้ง่าย เร็ว และราคาถูก และยูรีเอสถูกความร้อนทำลายไปพร้อมกับสารยับยั้ง จึงใช้เป็น “ตัวแทน” บอกได้ว่าถั่วสุกพอหรือยัง</div>
+  </div>
+  <div class="nav"><a href="#detective">← ฐาน 1<b>ภาพรวม</b></a><a href="#starch">ถัดไป →<b>1B แป้งแอบแฝง</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 1B STARCH ============ -->
+<section class="page" id="starch" style="--accent:#3949ab">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🐟</div><span class="kick">ฐาน 1 · จุด 1B</span>
+  <h1>แป้งแอบแฝง</h1>
+  <p>ใช้ไอโอดีนตรวจหาแป้งที่แอบปนอยู่ในปลาป่น</p>
+  <div class="read">⏱ อ่าน 2 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🔍 มันคืออะไร</h2>
+   <p>เป็นการตรวจว่ามี<b>แป้งราคาถูก</b> เช่น แป้งมันสำปะหลังหรือแป้งข้าว ปนอยู่ในวัตถุดิบโปรตีนอย่างปลาป่นหรือไม่</p>
+  </div>
+  <div class="sec"><h2>📜 ที่ไปที่มา</h2>
+   <p>ปลาป่นเป็นวัตถุดิบโปรตีนคุณภาพสูงและราคาแพง โดยคิดราคาตามน้ำหนักและเปอร์เซ็นต์โปรตีน ปลาป่นแท้<b>แทบไม่มีแป้งเลย</b> ถ้าตรวจเจอแป้ง ก็แปลว่ามีคนเติมลงไปเพื่อเพิ่มน้ำหนัก</p>
+   <p>ผลคือโปรตีนจริงในกระสอบลดลง สัตว์ได้โปรตีนไม่พอ โตช้า และผู้เลี้ยงจ่ายเงินซื้อของแพงแต่ได้แป้งราคาถูกกลับมา</p>
+  </div>
+  <div class="sec"><h2>🧪 หลักการ</h2>
+   <p>แป้งมีส่วนที่ชื่อ<b>อะไมโลส (amylose)</b> ซึ่งโมเลกุลขดตัวเป็นเกลียว ไอโอดีนจะเข้าไปแทรกอยู่ในเกลียวนั้น และทำให้เกิด<b>สีน้ำเงินเข้มจนเกือบดำ</b></p>
+   <div class="eq">แป้ง (เกลียวอะไมโลส) + I₃⁻ → สารเชิงซ้อนสีน้ำเงิน–ดำ<small>น้ำยาทำจากไอโอดีนละลายในโพแทสเซียมไอโอไดด์ (KI)</small></div>
+  </div>
+  <div class="sec"><h2>👁 อ่านผลยังไง (รอ 1 นาที)</h2>
+   <div class="sw">
+    <div><span class="dot" style="background:#b7863b"></span><b>ไม่มีแป้ง ✅</b>สีน้ำตาลเหลือง (สีของน้ำยา)</div>
+    <div><span class="dot" style="background:#1d1f4f"></span><b>มีแป้งปน ❌</b>สีน้ำเงิน–ดำ</div>
+   </div>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <p>นี่คือการทดสอบเดียวกับที่ใช้ตรวจแป้งในใบไม้ในวิชาชีววิทยา แต่ต้องระวัง วัตถุดิบที่<b>มีแป้งตามธรรมชาติ</b> เช่น ข้าวโพด มันเส้น หรือปลายข้าว จะขึ้นสีน้ำเงินอยู่แล้ว การทดสอบนี้จึงใช้กับวัตถุดิบที่<b>ไม่ควรมีแป้ง</b>เท่านั้น</p>
+  </div>
+  <div class="sec job"><h2>🧑‍🔬 นักสัตวบาลใช้ทำอะไร</h2>
+   <p>ใช้ตรวจปลาป่นและวัตถุดิบโปรตีนก่อนรับเข้าโรงงาน ถ้าสงสัยจะส่งตัวอย่างไปวิเคราะห์โปรตีนในห้องแลปเพื่อยืนยันผล</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>ถ้าหยดไอโอดีนบนข้าวโพดบดแล้วได้สีน้ำเงินดำ แปลว่าข้าวโพดถูกปลอมปนใช่ไหม?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">ไม่ใช่! ข้าวโพดมีแป้งเป็นส่วนประกอบหลักอยู่แล้ว จึงขึ้นสีทุกครั้ง การทดสอบนี้ใช้ได้กับวัตถุดิบที่ปกติไม่มีแป้ง เช่น ปลาป่น</div>
+  </div>
+  <div class="nav"><a href="#raw">← ก่อนหน้า<b>1A ดิบหรือสุก?</b></a><a href="#stone">ถัดไป →<b>1C ฟองฟ้องหิน</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 1C HULL ============ -->
+<section class="page" id="hull" style="--accent:#c0392b">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🌾</div><span class="kick">ฐาน 1 · จุด 1D</span>
+  <h1>แกลบปลอมตัว</h1>
+  <p>ใช้น้ำยาฟลอโรกลูซินอลตรวจแกลบที่ปนในรำข้าว</p>
+  <div class="read">⏱ อ่าน 2 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🔍 มันคืออะไร</h2>
+   <p>เป็นการตรวจว่า<b>รำข้าว</b>มี<b>แกลบ</b> (เปลือกนอกของเมล็ดข้าว) บดปนอยู่มากแค่ไหน</p>
+  </div>
+  <div class="sec"><h2>📜 ที่ไปที่มา</h2>
+   <p>รำละเอียดเป็นผงที่ได้จากการขัดสีข้าว เป็นวัตถุดิบยอดนิยมในอาหารหมู โค และสัตว์ปีก แกลบที่บดละเอียดแล้ว<b>มีสีคล้ายรำมาก</b> ดูด้วยตาเปล่าแยกไม่ออก แต่แกลบมีเยื่อใยและลิกนินสูง และมีซิลิกาปนอยู่มาก สัตว์จึงแทบย่อยไม่ได้</p>
+   <p>ถ้าแกลบปนมา สัตว์จะกินอิ่มแต่ได้พลังงานน้อย และซิลิกายังระคายเคืองทางเดินอาหารด้วย</p>
+  </div>
+  <div class="sec"><h2>🧪 หลักการ</h2>
+   <p>ในสภาพที่เป็นกรด <b>ฟลอโรกลูซินอล (phloroglucinol)</b> จะทำปฏิกิริยากับ<b>ลิกนิน</b> ซึ่งเป็นสารที่ทำให้ผนังเซลล์พืชแข็ง แล้วเกิด<b>สีแดงชมพู</b> แกลบมีลิกนินสูงจึงติดสีแดงชัด ส่วนรำมีลิกนินน้อยจึงติดสีน้อย</p>
+   <div class="eq">ลิกนิน + ฟลอโรกลูซินอล (ในกรดเกลือ) → สีแดงชมพู<small>รู้จักกันในชื่อ Wiesner test</small></div>
+  </div>
+  <div class="sec"><h2>👁 อ่านผลยังไง (รอ 5–10 นาที)</h2>
+   <div class="sw">
+    <div><span class="dot" style="background:#d9b98a"></span><b>รำแท้ ✅</b>สีน้ำตาลอ่อน มีจุดแดงน้อย</div>
+    <div><span class="dot" style="background:#c62f55"></span><b>แกลบปน ❌</b>จุดแดงชมพูทั่วจาน</div>
+   </div>
+   <p style="font-size:15px;margin-top:10px">ยิ่งแดงมากก็ยิ่งมีแกลบมาก ให้เทียบกับ<b>จานมาตรฐาน</b>ที่ผสมแกลบไว้ 2.5–40%</p>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <p>นักพฤกษศาสตร์ใช้น้ำยาตัวเดียวกันนี้ย้อมดูเนื้อไม้ใต้กล้องจุลทรรศน์ ส่วนที่มีลิกนินจะติดสีแดงสวยงาม</p>
+  </div>
+  <div class="sec job"><h2>🧑‍🔬 นักสัตวบาลใช้ทำอะไร</h2>
+   <p>ใช้ตรวจรำข้าวที่ซื้อจากโรงสีก่อนนำไปผสมอาหาร และใช้ประกอบการต่อรองราคา</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>แกลบกับรำมาจากข้าวเหมือนกัน ทำไมรำมีคุณค่าทางอาหารแต่แกลบแทบไม่มี?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">รำมาจากชั้นเยื่อหุ้มเมล็ดและจมูกข้าว จึงมีไขมัน โปรตีน และวิตามิน ส่วนแกลบคือเปลือกแข็งด้านนอกที่มีลิกนินกับซิลิกาสูง สัตว์จึงย่อยได้น้อยมาก</div>
+  </div>
+  <div class="nav"><a href="#stone">← ก่อนหน้า<b>1C ฟองฟ้องหิน</b></a><a href="#milk">ถัดไป →<b>ฐาน 2 รีดนม</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 1D STONE ============ -->
+<section class="page" id="stone" style="--accent:#13a3a0">
+ <div class="hero"><div class="wrap">
+  <div class="ico">⛰️</div><span class="kick">ฐาน 1 · จุด 1C</span>
+  <h1>ฟองฟ้องหิน</h1>
+  <p>หยดกรดเกลือแล้วฟังเสียงซ่า เพื่อจับหินฝุ่นที่ปนในวัตถุดิบ</p>
+  <div class="read">⏱ อ่าน 2 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🔍 มันคืออะไร</h2>
+   <p>เป็นการตรวจว่ามี<b>หินฝุ่น หินปูนบด หรือเปลือกหอยบด</b> ปนอยู่ในรำ ปลาป่น หรือวัตถุดิบอื่นหรือไม่</p>
+  </div>
+  <div class="sec"><h2>📜 ที่ไปที่มา</h2>
+   <p>หินฝุ่นมีราคาถูกมาก บดแล้วกลืนไปกับผงวัตถุดิบ และ<b>หนัก</b> คนขายที่ไม่ซื่อจึงเติมลงไปเพื่อให้ได้น้ำหนักเพิ่ม ผลคือสารอาหารต่อกิโลกรัมลดลง และสัตว์ได้แคลเซียมมากเกินไป ซึ่งรบกวนการดูดซึมแร่ธาตุตัวอื่นอย่างฟอสฟอรัสและสังกะสี</p>
+  </div>
+  <div class="sec"><h2>🧪 หลักการ</h2>
+   <p>หินปูนและเปลือกหอยคือ<b>แคลเซียมคาร์บอเนต</b> เมื่อเจอกรดจะเกิด<b>แก๊สคาร์บอนไดออกไซด์</b> เป็นฟองฟู่และมีเสียงซ่า</p>
+   <div class="eq">CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂↑<small>แคลเซียมคาร์บอเนต + กรดเกลือ → แคลเซียมคลอไรด์ + น้ำ + แก๊สคาร์บอนไดออกไซด์</small></div>
+  </div>
+  <div class="sec"><h2>👁 อ่านผลยังไง (เห็นทันที)</h2>
+   <div class="sw">
+    <div><span class="dot" style="background:#d9b98a"></span><b>ปกติ ✅</b>ฟองน้อยมาก หรือไม่มีฟอง</div>
+    <div><span class="dot" style="background:radial-gradient(circle at 30% 30%,#fff 0 18%,#bfe9e8 20% 40%,#fff 42% 50%,#9fdcda 52%)"></span><b>มีหินปน ❌</b>ฟองฟู่ซ่า ได้ยินเสียง</div>
+   </div>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <ul>
+    <li><b>ทรายไม่ฟู่!</b> เพราะทรายคือซิลิกา ไม่ใช่คาร์บอเนต ถ้าจะตรวจทรายต้องใช้วิธีอื่น เช่น หาปริมาณเถ้าที่ไม่ละลายในกรด</li>
+    <li>ในอาหารไก่ไข่ นักสัตวบาล<b>ตั้งใจใส่</b>เปลือกหอยหรือหินปูนลงไปเพื่อให้ไก่สร้างเปลือกไข่ ปัญหาจึงอยู่ที่การแอบเติมลงในวัตถุดิบโดยไม่บอก ไม่ได้อยู่ที่แคลเซียม</li>
+    <li>นักธรณีวิทยาก็ใช้วิธีหยดกรดแบบนี้แยกหินปูนออกจากหินชนิดอื่นในภาคสนาม</li>
+   </ul>
+  </div>
+  <div class="sec job"><h2>🧑‍🔬 นักสัตวบาลใช้ทำอะไร</h2>
+   <p>เป็นการทดสอบด่านแรกที่เร็วที่สุดตอนรับวัตถุดิบ รู้ผลในไม่กี่วินาที</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>ถ้าหยดกรดลงบนรำแล้วไม่มีฟองเลย สรุปได้ไหมว่ารำล็อตนี้ไม่มีอะไรปลอมปน?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">ยังสรุปไม่ได้ บอกได้แค่ว่าไม่มีหินปูนหรือเปลือกหอย แต่ยังอาจมีทราย แกลบ หรืออย่างอื่นปนอยู่ นักสืบตัวจริงจึงต้องตรวจหลายวิธีประกอบกัน</div>
+  </div>
+  <div class="nav"><a href="#starch">← ก่อนหน้า<b>1B แป้งแอบแฝง</b></a><a href="#hull">ถัดไป →<b>1D แกลบปลอมตัว</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 2 MILK ============ -->
+<section class="page" id="milk" style="--accent:#2e86de">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🥛</div><span class="kick">ฐาน 2</span>
+  <h1>มือทองรีดนม</h1>
+  <p>ฝึกรีดนมด้วยมือแบบที่ถูกต้องบนเต้านมเทียม</p>
+  <div class="read">⏱ อ่าน 2 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🔍 มันคืออะไร</h2>
+   <p>เต้านมของแม่โคแบ่งเป็น<b>4 เต้า</b> แต่ละเต้าสร้างและเก็บน้ำนมแยกกัน ที่ฐานนี้น้อง ๆ จะได้ลองรีดบนเต้านมเทียมที่บรรจุน้ำไว้ แล้วดูว่าภายในเวลาที่กำหนดรีดได้กี่มิลลิลิตร</p>
+  </div>
+  <div class="sec"><h2>📜 ทำไมยังต้องรีดเป็น</h2>
+   <p>ฟาร์มส่วนใหญ่ใช้เครื่องรีดนมแล้ว แต่ก่อนสวมเครื่องทุกครั้ง พนักงานต้อง<b>รีดน้ำนมสองสามสายแรกด้วยมือ</b> เพื่อดูว่ามีลิ่ม ตะกอน หรือน้ำนมผิดปกติไหม ซึ่งเป็นสัญญาณของ<b>เต้านมอักเสบ</b> นอกจากนี้ฟาร์มขนาดเล็กหรือโคที่ป่วยก็ยังต้องรีดด้วยมือ</p>
+  </div>
+  <div class="sec"><h2>✋ เทคนิคกำมือ (ที่ถูกต้อง)</h2>
+   <ul>
+    <li>ใช้<b>นิ้วโป้งกับนิ้วชี้</b>บีบปิดโคนหัวนม เพื่อไม่ให้น้ำนมไหลย้อนกลับขึ้นไป</li>
+    <li>แล้ว<b>กำนิ้วที่เหลือไล่ลงทีละนิ้ว</b> นิ้วกลาง นิ้วนาง นิ้วก้อย น้ำนมจะพุ่งออก</li>
+    <li>คลายมือให้น้ำนมไหลลงมาเติมในหัวนม แล้วทำซ้ำเป็นจังหวะ สลับซ้าย–ขวา</li>
+    <li><b>ห้ามดึงหรือรูดหัวนม</b> เพราะทำให้หัวนมบาดเจ็บและติดเชื้อง่าย</li>
+   </ul>
+  </div>
+  <div class="sec"><h2>🧠 วิทยาศาสตร์เบื้องหลัง</h2>
+   <p>เมื่อเต้านมถูกกระตุ้น เช่น ตอนเช็ดทำความสะอาด สมองแม่โคจะหลั่งฮอร์โมน<b>ออกซิโทซิน</b> ทำให้น้ำนมถูกบีบลงมา ฮอร์โมนนี้ออกฤทธิ์อยู่ประมาณ<b>5–7 นาที</b> จึงต้องรีดให้เสร็จในช่วงนั้น และถ้าโคตกใจหรือเครียด ฮอร์โมนอะดรีนาลีนจะไปยับยั้งการปล่อยน้ำนม นี่คือเหตุผลที่นักสัตวบาลต้องดูแลสัตว์อย่างนุ่มนวล</p>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <p>การสร้างน้ำนม 1 ลิตร ต้องมีเลือดไหลผ่านเต้านมราว <b>400–500 ลิตร</b> แม่โคนมจึงต้องกินอาหารดีและดื่มน้ำมากทุกวัน</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>ทำไมต้องบีบปิดโคนหัวนมก่อน แล้วค่อยกำนิ้วที่เหลือ?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">เพื่อขังน้ำนมไว้ในหัวนม ไม่ให้ไหลย้อนกลับขึ้นไปในเต้า แรงกำจึงดันน้ำนมออกทางรูหัวนมได้เต็มที่</div>
+  </div>
+  <div class="nav"><a href="#hull">← ก่อนหน้า<b>1D แกลบปลอมตัว</b></a><a href="#lasso">ถัดไป →<b>ฐาน 3 คล้องโค</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 3 LASSO ============ -->
+<section class="page" id="lasso" style="--accent:#8d5a2b">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🤠</div><span class="kick">ฐาน 3</span>
+  <h1>บ่วงพิชิตโค</h1>
+  <p>ลองโยนบ่วงคล้องโคจำลองกับพี่ทีมคล้องโค</p>
+  <div class="read">⏱ อ่าน 1 นาที</div>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>📜 ทำไมต้องคล้องโค</h2>
+   <p>โคที่เลี้ยงปล่อยในทุ่งไม่ค่อยคุ้นกับคน แต่ทุกตัวต้องได้รับการดูแลเป็นระยะ เช่น ฉีดวัคซีน ถ่ายพยาธิ รักษาแผล หรือตรวจท้อง นักสัตวบาลจึงต้อง<b>จับและบังคับโคให้ได้อย่างปลอดภัย</b> ทั้งต่อคนและต่อโค</p>
+   <p>ฟาร์มสมัยใหม่ใช้<b>ซองบังคับสัตว์</b>ร่วมด้วย และยึดหลัก<b>การจัดการแบบลดความเครียด (low-stress handling)</b> ส่วนทักษะคล้องโคยังใช้จริงในงานภาคสนาม และเป็นการแข่งขันทักษะของนักศึกษาเกษตร พี่ ๆ ทีม มธ. ฝึกเพื่อลงแข่งกีฬาทักษะเกษตร “4 จอบ”</p>
+  </div>
+  <div class="sec"><h2>🎯 เคล็ดลับโยนบ่วง</h2>
+   <ul>
+    <li>หมุนบ่วงเหนือศีรษะให้วงเปิดกว้าง ใช้ข้อมือหมุน ไม่ใช่เหวี่ยงทั้งแขน</li>
+    <li>เล็งไปที่<b>หัวหรือเขา</b> แล้วปล่อยตอนแขนชี้ตรงไปที่เป้า</li>
+    <li>เมื่อบ่วงคล้องได้ ให้ดึงเชือกให้บ่วงรัด</li>
+    <li>⚠ <b>ห้ามพันเชือกรอบมือหรือข้อมือ</b> เพราะถ้าโคออกแรงกระชาก อาจทำให้มือบาดเจ็บรุนแรง</li>
+   </ul>
+  </div>
+  <div class="sec fact"><h2>💡 รู้หรือไม่</h2>
+   <p>ตาของโคอยู่ด้านข้างหัว จึงมองเห็นได้กว้าง<b>เกือบ 330 องศา</b> แต่มี<b>จุดบอดอยู่ตรงด้านหลัง</b> นักสัตวบาลจึงไม่เดินเข้าหาโคทางด้านท้าย เพราะโคจะตกใจและอาจเตะได้</p>
+  </div>
+  <div class="sec quiz"><h2>❓ ลองตอบ</h2>
+   <p>ถ้าจะเดินเข้าไปหาโค ควรเข้าทางไหนเพื่อไม่ให้โคตกใจ?</p>
+   <button onclick="this.parentNode.classList.toggle('open')">ดูเฉลย</button>
+   <div class="ans">เข้าทางด้านข้างค่อนไปทางหัว ในจุดที่โคมองเห็นเรา เดินช้า ๆ และไม่ส่งเสียงดัง ห้ามเข้าทางด้านหลังซึ่งเป็นจุดบอด</div>
+  </div>
+  <div class="nav"><a href="#milk">← ก่อนหน้า<b>ฐาน 2 รีดนม</b></a><a href="#arcade">ถัดไป →<b>ฐาน 4 เกม</b></a></div>
+ </div>
+</section>
+
+<!-- ============ 4 ARCADE ============ -->
+<section class="page" id="arcade" style="--accent:#7b4ddb">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🎮</div><span class="kick">ฐาน 4</span>
+  <h1>สนามประลองนักสัตวบาล</h1>
+  <p>Animal Science Arcade เกมตู้ 3 ด่าน เล่นได้พร้อมกัน 2 คน</p>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🕹 3 ด่าน = 3 ฐานที่เพิ่งผ่านมา</h2>
+   <ul>
+    <li><b>ด่าน 1 นักสืบอาหารสัตว์</b> (45 วิ) ดูผลทดสอบแล้วกดตอบให้ถูกว่าวัตถุดิบปนอะไรมา</li>
+    <li><b>ด่าน 2 รีดนมตามจังหวะ</b> (35 วิ) กด LT/RT ตามโน้ต ถ้ากดรัวมั่ว แม่โคจะเตะถัง!</li>
+    <li><b>ด่าน 3 คล้องโค</b> (50 วิ) ค้างปุ่ม A เพื่อหมุนบ่วง แล้วปล่อยตอนเข็มอยู่โซนเขียว</li>
+   </ul>
+   <p>ติด 10 อันดับของวันนี้ ได้ใส่ชื่อย่อขึ้นกระดาน!</p>
+  </div>
+  <div class="sec fact"><h2>💡 เคล็ดลับ</h2>
+   <p>ถ้าอ่านความรู้ของฐาน 1 ในเว็บนี้มาแล้ว ด่านแรกจะง่ายขึ้นมาก 😉</p>
+  </div>
+  <div class="nav"><a href="#lasso">← ก่อนหน้า<b>ฐาน 3 คล้องโค</b></a><a href="#career">ถัดไป →<b>นักสัตวบาล + สมัครเรียน</b></a></div>
+ </div>
+</section>
+
+<!-- ============ CAREER / TCAS ============ -->
+<section class="page" id="career" style="--accent:#1b8a5a">
+ <div class="hero"><div class="wrap">
+  <div class="ico">🎓</div><span class="kick">ความเป็นนักสัตวบาล</span>
+  <h1>นักสัตวบาลทำงานอะไร?</h1>
+  <p>คนที่ดูแลให้สัตว์อยู่ดีและให้ผลผลิตดี ตั้งแต่อาหารในรางจนถึงอาหารบนจานของเรา</p>
+ </div></div>
+ <div class="wrap">
+  <div class="sec"><h2>🐖 นักสัตวบาลคือใคร</h2>
+   <p>ผู้เชี่ยวชาญด้าน<b>การผลิตสัตว์</b> ได้แก่ อาหารและการให้อาหาร การปรับปรุงพันธุ์ การสืบพันธุ์ การจัดการฟาร์มและสุขภาพสัตว์ ตลอดจนผลิตภัณฑ์จากสัตว์อย่างนม ไข่ และเนื้อ โดยใช้วิทยาศาสตร์และข้อมูลทำให้ฟาร์มได้ผลผลิตดี ปลอดภัย และยั่งยืน</p>
+  </div>
+  <div class="sec job"><h2>💼 ทำงานที่ไหนได้บ้าง</h2>
+   <ul>
+    <li><b>โรงงานอาหารสัตว์</b> เช่น ฝ่ายควบคุมคุณภาพ (แบบฐาน 1!) นักสูตรอาหาร และฝ่ายผลิต</li>
+    <li><b>ฟาร์ม</b> สุกร ไก่ โคนม โคเนื้อ ทั้งในตำแหน่งผู้จัดการฟาร์มและนักวิชาการ</li>
+    <li><b>บริษัท</b>อาหารเสริมสัตว์ เวชภัณฑ์สัตว์ และอุปกรณ์ฟาร์ม ในตำแหน่งฝ่ายวิชาการหรือฝ่ายขาย</li>
+    <li><b>หน่วยงานรัฐ</b> เช่น กรมปศุสัตว์ และงานวิจัย</li>
+    <li><b>เจ้าของธุรกิจ</b>ฟาร์มหรือผลิตภัณฑ์จากสัตว์ของตัวเอง</li>
+   </ul>
+  </div>
+  <div class="sec"><h2>🏫 เรียนที่ มธ.</h2>
+   <p><b>สาขาวิชาเทคโนโลยีการเกษตร</b> คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต เรียนด้านการผลิตพืชและสัตว์และเทคโนโลยีการเกษตร ได้ลงมือทำจริงทั้งในห้องปฏิบัติการและที่ฟาร์ม อย่างที่น้อง ๆ ได้ลองที่บูธนี้</p>
+   <a class="btn" href="https://www.tuadmissions.in.th" target="_blank" rel="noopener">📝 ดูประกาศรับสมัครของ มธ. (TU Admissions)</a>
+   <a class="btn alt" href="https://student.mytcas.com" target="_blank" rel="noopener">ระบบ TCAS (mytcas.com)</a>
+  </div>
+  <div class="nav"><a href="#home">← กลับหน้าแรก<b>4 ฐานกิจกรรม</b></a><a href="#detective">เริ่มอ่านใหม่ →<b>ฐาน 1</b></a></div>
+ </div>
+</section>
+
+<footer>สาขาวิชาเทคโนโลยีการเกษตร คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์<br>บูธ Open House · “ลองเป็นนักสัตวบาล”</footer>
+
+<script>
+var ids=[].map.call(document.querySelectorAll('.page'),function(s){return s.id});
+function show(){
+  var h=(location.hash||'#home').slice(1); if(ids.indexOf(h)<0) h='home';
+  document.querySelectorAll('.page').forEach(function(s){s.classList.toggle('on',s.id===h)});
+  var c=getComputedStyle(document.getElementById(h)).getPropertyValue('--accent');
+  var m=document.querySelector('meta[name=theme-color]'); if(m) m.content=c.trim();
+  var top=function(){window.scrollTo({top:0,left:0,behavior:'instant'})};
+  top(); requestAnimationFrame(top); setTimeout(top,60);
+}
+window.addEventListener('hashchange',show); show();
+</script>
+<meta name="theme-color" content="#2e86de">
+</body>
+</html>
