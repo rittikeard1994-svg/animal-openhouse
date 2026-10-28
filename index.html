@@ -140,7 +140,7 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
   </div>
   <div class="sec pass">
    <h2>🎫 พาสปอร์ตนักสัตวบาล</h2>
-   <p>พาสปอร์ตอยู่ในมือถือ ไม่ต้องรับบัตรกระดาษ เล่นจบแต่ละฐาน พี่ประจำฐานจะยื่น QR ให้สแกนรับตรา <b>ครบ 3 ฐาน (ฐาน 1–3)</b> รับของที่ระลึกที่โต๊ะต้อนรับ ส่วนฐาน 4 เกมตู้เป็นโบนัส</p>
+   <p>พาสปอร์ตอยู่ในมือถือ ไม่ต้องรับบัตรกระดาษ เล่นจบแต่ละฐาน พี่ประจำฐานจะยื่น QR ให้สแกนรับตรา <b>ครบ 3 ฐาน (ฐาน 1–3)</b> รับของรางวัลที่โต๊ะต้อนรับ ส่วนฐาน 4 เกมตู้เป็นโบนัส</p>
    <a class="btn" href="#passport" style="background:#1b6fc2">🎫 เปิดพาสปอร์ตของฉัน</a>
   </div>
   <a class="btn" href="#career">🎓 นักสัตวบาลทำงานอะไร + ติดตามสาขา</a>
@@ -441,15 +441,15 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:18px 0 40px}
  <div class="hero"><div class="wrap">
   <div class="ico">🎫</div><span class="kick">Open House · ลองเป็นนักสัตวบาล</span>
   <h1>พาสปอร์ตนักสัตวบาล</h1>
-  <p id="pp-hello">เล่นครบ 3 ฐาน รับของที่ระลึกที่โต๊ะต้อนรับ</p>
+  <p id="pp-hello">เล่นครบ 3 ฐาน รับของรางวัลที่โต๊ะต้อนรับ</p>
   <div class="prog"><i id="pp-bar"></i></div><div class="read" id="pp-count">ตรา 0/3</div>
  </div></div>
  <div class="wrap">
   <div class="sec" id="pp-name"><h2>✍️ ชื่อเล่นของน้อง</h2>
    <div class="row"><input id="pp-in" maxlength="16" placeholder="เช่น ต้นข้าว" autocomplete="off" enterkeyhint="done"><button type="button" id="pp-save">บันทึก</button></div>
-   <p class="hint">ใช้แสดงบนบัตรแลกของที่ระลึก ใส่แค่ชื่อเล่นพอ</p>
+   <p class="hint">ใช้แสดงบนบัตรแลกของรางวัล ใส่แค่ชื่อเล่นพอ</p>
   </div>
-  <div class="tk" id="pp-tk"><div class="t1">🎁 บัตรแลกของที่ระลึก</div><div class="nm" id="tk-nm"></div><div class="t2" id="tk-t2"></div><div class="clk" id="tk-clk">--:--:--</div><div class="t3">ยื่นจอนี้ให้พี่ที่โต๊ะต้อนรับ</div><div class="used" id="tk-used"></div></div>
+  <div class="tk" id="pp-tk"><div class="t1">🎁 บัตรแลกของรางวัล</div><div class="nm" id="tk-nm"></div><div class="t2" id="tk-t2"></div><div class="clk" id="tk-clk">--:--:--</div><div class="t3">ยื่นจอนี้ให้พี่ที่โต๊ะต้อนรับ</div><div class="used" id="tk-used"></div></div>
   <div class="stamps" id="pp-st"></div>
   <div class="sec"><h2>📲 รับตรายังไง</h2>
    <ol style="margin:6px 0;padding-left:22px"><li>เล่นแต่ละฐานให้จบ</li><li>พี่ประจำฐานยื่น <b>การ์ด QR</b> ให้สแกน แล้วตราจะเด้งขึ้นที่หน้านี้</li><li>ครบ 3 ตรา บัตรทองจะโผล่ขึ้นมา ให้ไปโชว์พี่ที่โต๊ะต้อนรับ</li></ol>
@@ -528,7 +528,7 @@ function renderPass(newNo){
   var s=load(),n=cnt(s);
   document.getElementById('pp-bar').style.width=(n/ST.length*100)+'%';
   document.getElementById('pp-count').textContent=n===ST.length?'ครบ 3 ตราแล้ว! 🎉':'ตรา '+n+'/'+ST.length+' · เหลืออีก '+(ST.length-n)+' ฐาน';
-  var goal=s.red?'รับของที่ระลึกแล้ว ขอบคุณที่มาเป็นนักสัตวบาลกับเรานะ':s.done?'เก่งมาก! ไปรับของที่ระลึกที่โต๊ะต้อนรับได้เลย':'เล่นครบ 3 ฐาน รับของที่ระลึกที่โต๊ะต้อนรับ';
+  var goal=s.red?'รับของรางวัลแล้ว ขอบคุณที่มาเป็นนักสัตวบาลกับเรานะ':s.done?'เก่งมาก! ไปรับของรางวัลที่โต๊ะต้อนรับได้เลย':'เล่นครบ 3 ฐาน รับของรางวัลที่โต๊ะต้อนรับ';
   document.getElementById('pp-hello').innerHTML=(s.n?'สวัสดี น้อง<b>'+esc(s.n)+'</b> 👋 ':'')+goal;
   document.getElementById('pp-name').style.display=s.n?'none':'block';
   document.getElementById('pp-st').innerHTML=ST.map(function(x){var t=s.st[x.no];
